@@ -18,9 +18,15 @@ This was primarily built in jupyter labs, and requires:
 
 ## Evaluation Report
 
-I tried to do three additional classifications on the dataset. None of them had great precision or recall. Also, it seems like all of them failed toward the end of the testing period, I suspect that this is because the training period is kind of extreme (the etf drops about 30% in the bulk of the training period). 
+I tried to do the three recommended classifications on the dataset. None of them had great precision or recall. 
 
-As you can tell from the graph, the LogisticRegression and AdaBoostClassifier seemed to do well until the very where they dipped out. The DecisionTreeClassifier was really odd because it semmed reverse mirror the actual return. Perhaps I wasn't using that one correctly.
+- The ADA strategy had a rough patch in the middle, but ended okay. Having 100 or more n_estimators makes the rough patch in the middle better, but then it crashes at the end, similar to the way the LR strategy is currently crashing.
+- The LR strategy seemed good for the most part, but then it crashed at the end. I tried tweaking different parameters for this. I found that setting class_weight="balanced" greatly improved it's results. However, i couldn't figure out how to not get it to crash at the end.
+- The DecisionTreeClassifier isn't really working the way I have it set up. It seems like it is showing the inverse of what it should (it's like the Actual Results flipped up side down). I tried tweaking a bunch of different params, but I couldn't figure out how to fix this.
+
+To conclude, none of these seem that great. Perhaps the best one is the ADA strategy for now, only because it's the least worse of the three. The LR result dip at the very end is very worrisome(how low will it go?), and it's strange that the DTC shows mirrored results of everything.
+
+
 
 
 ![alt text](https://github.com/jrossi237/ml_trading_bot/blob/main/strategies_graphed.png)
