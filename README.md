@@ -1,6 +1,6 @@
 # Machine Learning Trading bot predictor
 
-Performs one machine learning algorithms to try to predict buy / sell signals for a emerging markets etf.
+Performs machine learning algorithms to try to predict buy / sell signals for a emerging markets etf.
 ---
 
 
