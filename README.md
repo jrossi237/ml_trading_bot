@@ -16,8 +16,8 @@ This was primarily built in jupyter labs, and requires:
    
 ---
 
-## Evaluation Report
 
+## Part one runs using SVM:
 ### Run 1 Findings:
 It seems like the predicted stategy was close to the actual returns.
 
@@ -34,7 +34,8 @@ It seems like the predicted stategy was close to the actual returns.
 
 
 
-### Other Classification findings:
+
+## Evaluation Report
 
 I tried to do the three recommended classifications on the dataset. None of them had great precision or recall. 
 
@@ -44,8 +45,14 @@ I tried to do the three recommended classifications on the dataset. None of them
 
 To conclude, none of these seem that great. Perhaps the best one is the ADA strategy for now, only because it's the least worse of the three. The LR result dip at the very end is very worrisome(how low will it go?), and it's strange that the DTC shows mirrored results of everything.
 
-
-
-
 ![alt text](https://github.com/jrossi237/ml_trading_bot/blob/main/strategies_graphed.png)
+
+
+
+I also tried to tweak the training period from 3 months to 6 months. This seemed to have broke the ADA strategy, but the LR seemed to really like it a lot.
+
+![alt text](https://github.com/jrossi237/ml_trading_bot/blob/main/strategies_graphed_run2.png)
+
+
+
    
