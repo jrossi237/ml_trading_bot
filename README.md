@@ -18,6 +18,24 @@ This was primarily built in jupyter labs, and requires:
 
 ## Evaluation Report
 
+### Run 1 Findings:
+It seems like the predicted stategy was close to the actual returns.
+
+![alt text](https://github.com/jrossi237/ml_trading_bot/blob/main/svm_strategy_graphed.png)
+
+
+### Run 2 Findings:
+ What impact resulted from increasing or decreasing either or both of the SMA windows?
+- I tried tweaking the traing time to 4 months, and it made things worse.
+- I tried to shorten the long window, and that also made it worse.
+- I shortened the short_window, and it became a bit better.
+
+![alt text](https://github.com/jrossi237/ml_trading_bot/blob/main/svm_strategy_graphed_run_2.png)
+
+
+
+### Other Classification findings:
+
 I tried to do the three recommended classifications on the dataset. None of them had great precision or recall. 
 
 - The ADA strategy had a rough patch in the middle, but ended okay. Having 100 or more n_estimators makes the rough patch in the middle better, but then it crashes at the end, similar to the way the LR strategy is currently crashing.
